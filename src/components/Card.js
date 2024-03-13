@@ -16,10 +16,10 @@ const  Card = ({ id, name, info, image, price }) => {
     toast.success(`Booking Confirmed for ${name}`);
   };
 
+  // <img src="https://www.godrej-ananda.net.in/images/other/how-bangalore-got-its-name.webp" className="image" alt="error"></img>
   return (
     <div className="card">
       <img src={image} className="image" alt="error"></img>
-
       <div className="tour-details">
         <h4 className="tour-price">{price}</h4>
         <h4 className="tour-name">{name} </h4>

@@ -9,7 +9,6 @@ const Tours = () => {
             </div>
 
             <StateFilter />
-
         </div>
     );
 }

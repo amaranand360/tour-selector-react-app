@@ -18,10 +18,11 @@ body {
 
 .title {
   font-size: 3rem;
-  margin: 6vh;
-  border: 7px dashed rgb(1, 17, 160);
   border-radius: 20px;
   padding: 1vh 5vw;
+  margin: 6vh;
+  border: 7px dashed rgb(1, 17, 160);
+  
 }
 
 .cards {
@@ -178,14 +179,6 @@ body {
     margin: 0 8px;
     cursor: pointer;
   }
-
-  .footer-mid-text {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  
   
   .qr-img {
     height: 150px;
@@ -204,7 +197,13 @@ body {
     justify-content: center;
   }
   
-
+  .footer-mid-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
   
  
   

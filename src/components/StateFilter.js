@@ -5,7 +5,18 @@ import { toast } from "react-toastify";
 
 const StateFilter = () => {
   const [selectedState, setSelectedState] = useState(null);
-  const uniqueStates = [...new Set(data.map((item) => item.state))];
+
+  const uniqueStates = [
+    "Uttar Pradesh",
+    "Rajasthan",
+    "Goa",
+    "West Bengal",
+    "Kerala",
+    "Maharashtra",
+    "Himachal Pradesh",
+    "Bihar",
+    "Jharkhand"
+  ];
 
   // Function to handle state selection
   function filterHandler(stateName) {
@@ -20,21 +31,21 @@ const StateFilter = () => {
 
   return (
     <div>
-    <div className="filter-option">
-    {/* Assuming you have a list of states to select from */}
-    <select
-      onChange={(e) => filterHandler(e.target.value)}
-      className={selectedState ? "active-select" : "inactive-select"}
-    >
-      <option value="">Show all states</option>
-      {/* Map over the array of unique states */}
-      {uniqueStates.map((state) => (
-        <option key={state} value={state}>
-          {state}
-        </option>
-      ))}
-    </select>
-  </div>
+      <div className="filter-option">
+        {/* Assuming you have a list of states to select from */}
+        <select
+          onChange={(e) => filterHandler(e.target.value)}
+          className={selectedState ? "active-select" : "inactive-select"}
+        >
+          <option value="">Show all states</option>
+          {/* Map over the array of unique states */}
+          {uniqueStates.map((state) => (
+            <option key={state} value={state}>
+              {state}
+            </option>
+          ))}
+        </select>
+      </div>
 
       <div className="filter-container">
         {/* Display the filtered data */}
@@ -43,6 +54,7 @@ const StateFilter = () => {
             <Card key={item.id} {...item}></Card>
           ))}
         </div>
+        
       </div>
     </div>
   );
